@@ -1,0 +1,39 @@
+body {
+  background-color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+div {
+  background-color: #F9F9F9;
+  width: 80%;
+  text-align: left;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+p {
+  margin: 10px
+}
+
+img {
+  margin: 10px
+}
+
+video {
+  margin: 10px
+}
+
+table {
+  margin: 10px
+}
+
+h2 {
+  margin: 10px
+}
+
+.black {
+  color: black
+}
