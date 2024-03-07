@@ -1,0 +1,26 @@
+body {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div {
+    background-color: #F9F9F9;
+    width: 80%;
+    text-align: left;
+}
+
+a {
+    color: #2E67D3;
+}
+
+th {
+    border: 1px solid black;
+}
+
+h2 {
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+}
