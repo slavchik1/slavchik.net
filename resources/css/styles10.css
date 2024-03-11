@@ -24,3 +24,8 @@ h2 {
 p {
     margin: 10px;
 }
+
+span {
+    display: flex;
+    align-items: center;
+}
