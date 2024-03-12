@@ -2,3 +2,9 @@ ukr.png: https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukrai
 eng.png: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1000px-Flag_of_the_United_Kingdom_%283-5%29.svg.png
 yt.png: https://www.youtube.com/s/desktop/29d8088d/img/favicon_144x144.png
 ArduinoUnoKeystudio.png (edited): https://ueeshop.ly200-cdn.com/u_file/UPAH/UPAH808/2206/photo/785850d540.jpg
+ArduinoUSBCable.png (edited): https://static-01.daraz.com.bd/p/4384aea178a39c67fa79659189203ca3.png
+KeystudioRemoteControler.png (edited): https://fluxworkshop.com/cdn/shop/products/80660ae7-83c4-4343-8502-7ea41095aac1_1200x1200.jpg
+IRRemoteReciver.png (edited): https://cdn.salla.sa/bPKxw/wbHX7i5bcc6eeTvwho8nllA0yeSuKlYQJyl6nuAY.png
+7-segLED1x.png (edited): https://ardushop.ro/424-thickbox_default/7-segment-led-display.jpg
+LCDDisplay (edited): https://circuit.rocks/cdn/shop/products/lcd-i2c-1602-display-module-blue-1016.jpg
+LCDDisplayModule (edited): https://ardushop.ro/463/lcd-display-1602-i2c-adapter.jpg
