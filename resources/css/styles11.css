@@ -1,0 +1,39 @@
+body {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: #2E67D3;
+}
+
+select {
+    width: 200px;
+}
+
+input {
+    width: 200px;
+}
+
+.first-div {
+    background-color: #F9F9F9;
+    width: 80%;
+    text-align: left;
+}
+
+.upper-div {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.lover-div {
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+}
+
+.invisible {
+    display: none;
+}
