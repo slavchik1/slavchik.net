@@ -7,14 +7,14 @@ function generate() {
     var system = selectSystem.value;
     var URL = url.value;
     
-    if (system == "Оберіть систему") {
-        alert("Помилка: система не обрана. Будь ласка, оберіть систему.");
+    if (system == "Select a system") {
+        alert("Error: system is not selected. Pleese select a system.");
         return undefined;
     } else if (URL == "") {
-        alert("Помилка: відсутнє посилання. Будь ласка, введіть посилання.");
+        alert("Error: link is missing. Please enter the link.");
         return undefined;
     } else if (!URL.startsWith("http://") && !URL.startsWith("https://")) {
-        alert("Помилка: посилання не починається з http:// або з https://.");
+        alert("Error: link didn't starts with http:// or with https://.");
         return undefined;
     }
     
@@ -31,7 +31,7 @@ function generate() {
     try {
         var fileBase64 = btoa(file);
     } catch (e) {
-        alert("Помилка: " + e + ". Спробуйте прибрати спеціальні символи та букви не литиниці (кирилиці).")
+        alert("Error: " + e + ". Try to remove special symbols and non latin letters.")
         return undefined;
     }
     
