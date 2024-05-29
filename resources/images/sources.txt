@@ -9,3 +9,4 @@ IRRemoteReciver.png (edited): https://cdn.salla.sa/bPKxw/wbHX7i5bcc6eeTvwho8nllA
 LCDDisplay.png (edited): https://circuit.rocks/cdn/shop/products/lcd-i2c-1602-display-module-blue-1016.jpg
 LCDDisplayModule.png (edited): https://ardushop.ro/463/lcd-display-1602-i2c-adapter.jpg
 Breadboard.png (edited): https://joy-it.net/files/files/Produkte/RB-Breadboard2/RB-Breadboard2-1.png
+Resistor.png (edited): https://www.tomexpress.org/image/cache/catalog/Case_Tom/ANY/Resistor/Resistor_1W-900x900.jpg
