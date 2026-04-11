@@ -1,9 +1,8 @@
 const selectFormat = document.getElementById("select-format");
-const url = document.getElementById("url");
+const urlElement = document.getElementById("link");
 const generateButton = document.getElementById("generate");
 const download = document.getElementById("download-a");
 const lang = document.querySelector("html").getAttribute("lang");
-let previousDownloadURL = null;
 const texts = {
     "error/system not chosen": {
         "en": "Error: a system is not selected. Please select the system.",
@@ -34,15 +33,15 @@ function t(key) {
 
 function generate() {
     var format = selectFormat.options[selectFormat.selectedIndex].id;
-    var urlValue = url.value;
+    var url = urlElement.value.trim();
     
     if (format == "undefined") {
         alert(t("error/system not chosen"));
         return undefined;
-    } else if (urlValue == "") {
+    } else if (url == "") {
         alert(t("error/link is missing"));
         return undefined;
-    } else if (!urlValue.toLowerCase().startsWith("http://") && !urlValue.toLowerCase().startsWith("https://")) {
+    } else if (!url.toLowerCase().startsWith("http://") && !url.toLowerCase().startsWith("https://")) {
         alert(t("error/not http(s)"));
         return undefined;
     }
@@ -50,18 +49,14 @@ function generate() {
     download.setAttribute("class", "invisible");
     
     if (format == "url") {
-        var file = `[InternetShortcut]\nURL=${urlValue}`;
+        var file = `[InternetShortcut]\nURL=${url}`;
         download.setAttribute("download", "file.url");
     } else if (format == "webloc") {
-        var file = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>URL</key><string>${urlValue}</string></dict></plist>`;
+        var file = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>URL</key><string>${url}</string></dict></plist>`;
         download.setAttribute("download", "file.webloc");
     } else if (format == "html") {
-        var file = `<!DOCTYPE html><html><head><script>window.location.replace("${urlValue}")</script></head><body><a href="${urlValue}">${urlValue}</a></body></html>`;
+        var file = `<!DOCTYPE html><html><head><script>window.location.replace("${url}")</script></head><body><a href="${url}">${url}</a></body></html>`;
         download.setAttribute("download", "file.html");
-    }
-
-    if (previousDownloadURL !== null) {
-        URL.revokeObjectURL(previousDownloadURL);
     }
 
     var blob = new Blob([file], {type: "text/plain;charset=utf-8"});
