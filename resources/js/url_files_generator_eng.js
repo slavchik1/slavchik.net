@@ -8,7 +8,7 @@ function generate() {
     var URL = url.value;
     
     if (system == "Select a system") {
-        alert("Error: system is not selected. Pleese select a system.");
+        alert("Error: an OS is not selected. Please select the OS.");
         return undefined;
     } else if (URL == "") {
         alert("Error: link is missing. Please enter the link.");
