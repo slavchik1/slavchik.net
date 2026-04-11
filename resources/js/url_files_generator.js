@@ -1,9 +1,10 @@
 const selectFormat = document.getElementById("select-format");
 const urlElement = document.getElementById("link");
 const generateButton = document.getElementById("generate");
-const download = document.getElementById("download-a");
+const downloadButton = document.getElementById("download-button");
 const lang = document.querySelector("html").getAttribute("lang");
 let previousDownloadURL;
+let previousDownloadName;
 const texts = {
     "error/system not chosen": {
         "en": "Error: a system is not selected. Please select the system.",
@@ -32,6 +33,16 @@ function t(key) {
     return texts[key][lang];
 }
 
+function clearGeneratedFile() {
+    if (previousDownloadURL) {
+        URL.revokeObjectURL(previousDownloadURL);
+        previousDownloadURL = undefined;
+    }
+
+    previousDownloadName = undefined;
+    downloadButton.setAttribute("class", "invisible");
+}
+
 function generate() {
     var format = selectFormat.options[selectFormat.selectedIndex].id;
     var url = urlElement.value.trim();
@@ -47,29 +58,41 @@ function generate() {
         return undefined;
     }
     
-    download.setAttribute("class", "invisible");
+    clearGeneratedFile();
     
     if (format == "url") {
         var file = `[InternetShortcut]\nURL=${url}`;
-        download.setAttribute("download", "file.url");
+        previousDownloadName = "file.url";
     } else if (format == "webloc") {
         var file = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>URL</key><string>${url}</string></dict></plist>`;
-        download.setAttribute("download", "file.webloc");
+        previousDownloadName = "file.webloc";
     } else if (format == "html") {
         var file = `<!DOCTYPE html><html><head><script>window.location.replace("${url}")</script></head><body><a href="${url}">${url}</a></body></html>`;
-        download.setAttribute("download", "file.html");
-    }
-
-    if (previousDownloadURL) {
-        URL.revokeObjectURL(previousDownloadURL);
+        previousDownloadName = "file.html";
     }
 
     var blob = new Blob([file], {type: "text/plain;charset=utf-8"});
     var fileURL = URL.createObjectURL(blob);
 
     previousDownloadURL = fileURL;
-    download.setAttribute("href", fileURL);
-    download.removeAttribute("class");
+    downloadButton.removeAttribute("class");
 }
 
+function downloadGeneratedFile() {
+    if (!previousDownloadURL || !previousDownloadName) {
+        return undefined;
+    }
+
+    var a = document.createElement("a");
+    a.setAttribute("href", previousDownloadURL);
+    a.setAttribute("download", previousDownloadName);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+selectFormat.addEventListener("change", clearGeneratedFile);
+urlElement.addEventListener("input", clearGeneratedFile);
 generateButton.addEventListener("click", generate);
+downloadButton.addEventListener("click", downloadGeneratedFile);
+window.addEventListener("beforeunload", clearGeneratedFile);
