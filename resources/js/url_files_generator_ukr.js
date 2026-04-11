@@ -13,7 +13,7 @@ function generate() {
     } else if (URL == "") {
         alert("Помилка: відсутнє посилання. Будь ласка, введіть посилання.");
         return undefined;
-    } else if (!URL.startsWith("http://") && !URL.startsWith("https://")) {
+    } else if (!URL.toLowerCase().startsWith("http://") && !URL.toLowerCase().startsWith("https://")) {
         alert("Помилка: посилання не починається з http:// або з https://.");
         return undefined;
     }

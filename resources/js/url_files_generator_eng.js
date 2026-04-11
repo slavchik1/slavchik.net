@@ -13,7 +13,7 @@ function generate() {
     } else if (URL == "") {
         alert("Error: link is missing. Please enter the link.");
         return undefined;
-    } else if (!URL.startsWith("http://") && !URL.startsWith("https://")) {
+    } else if (!URL.toLowerCase().startsWith("http://") && !URL.toLowerCase().startsWith("https://")) {
         alert("Error: link didn't starts with http:// or with https://.");
         return undefined;
     }
