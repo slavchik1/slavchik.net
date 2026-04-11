@@ -19,10 +19,11 @@
                 <img src="../../resources/images/blank.png" width="0" height="10px">
                 <center>
                     <div class="upper-div">
-                        <select id="select-system">
-                            <option>Оберіть систему</option>
-                            <option>Windows</option>
-                            <option>MacOS</option>
+                        <select id="select-format">
+                            <option id="undefined">Оберіть формат</option>
+                            <option id="url">URL (Windows)</option>
+                            <option id="webloc">WEBLOC (MacOS)</option>
+                            <option if="html">HTML (універсальний)</option>
                         </select>
                         <input id="url" placeholder="Введіть URL-посилання">
                     </div>
