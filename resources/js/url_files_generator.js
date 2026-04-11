@@ -3,6 +3,7 @@ const urlElement = document.getElementById("link");
 const generateButton = document.getElementById("generate");
 const download = document.getElementById("download-a");
 const lang = document.querySelector("html").getAttribute("lang");
+let previousDownloadURL;
 const texts = {
     "error/system not chosen": {
         "en": "Error: a system is not selected. Please select the system.",
@@ -57,6 +58,10 @@ function generate() {
     } else if (format == "html") {
         var file = `<!DOCTYPE html><html><head><script>window.location.replace("${url}")</script></head><body><a href="${url}">${url}</a></body></html>`;
         download.setAttribute("download", "file.html");
+    }
+
+    if (previousDownloadURL) {
+        URL.revokeObjectURL(previousDownloadURL);
     }
 
     var blob = new Blob([file], {type: "text/plain;charset=utf-8"});
