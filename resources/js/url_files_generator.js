@@ -8,7 +8,7 @@ let previousDownloadName;
 const texts = {
     "error/system not chosen": {
         "en": "Error: a format is not selected. Please select the format.",
-        "uk": "Помилка: формат не обрано. Будь ласка, оберіть систему."
+        "uk": "Помилка: формат не обрано. Будь ласка, оберіть формат."
     },
     "error/link is missing": {
         "en": "Error: the link is missing. Please enter the link.",
