@@ -7,24 +7,16 @@ let previousDownloadURL;
 let previousDownloadName;
 const texts = {
     "error/system not chosen": {
-        "en": "Error: a system is not selected. Please select the system.",
-        "uk": "Помилка: система не обрана. Будь ласка, оберіть систему."
+        "en": "Error: a format is not selected. Please select the format.",
+        "uk": "Помилка: формат не обрано. Будь ласка, оберіть систему."
     },
     "error/link is missing": {
         "en": "Error: the link is missing. Please enter the link.",
-        "uk": "Помилка: відсутнє посилання. Будь ласка, введіть посилання."
+        "uk": "Помилка: посилання відсутнє. Будь ласка, введіть посилання."
     },
     "error/not http(s)": {
-        "en": "Error: link don't starts with http:// nor with https://.",
-        "uk": "Помилка: посилання не починається ні з http:// ні з https://."
-    },
-    "error/undefined error/1": {
-        "en": "Error: ",
-        "uk": "Помилка: "
-    },
-    "error/undefined error/2": {
-        "en": ". Try to remove special symbols and non-latin letters.",
-        "uk": ". Спробуйте прибрати спеціальні символи та букви не литиниці (можливо кирилиці)."
+        "en": "Error: the link don't start with http:// nor with https://.",
+        "uk": "Помилка: посилання не починається ні з http://, ані з https://."
     }
 };
 
