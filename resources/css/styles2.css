@@ -15,23 +15,23 @@ a {
 }
 
 p {
-  margin: 10px
+  margin: 10px;
 }
 
 img {
-  margin: 10px
+  margin: 10px;
 }
 
 video {
-  margin: 10px
+  margin: 10px;
 }
 
 table {
-  margin: 10px
+  margin: 10px;
 }
 
 h2 {
-  margin: 10px
+  margin: 10px;
 }
 
 pre {
@@ -39,5 +39,5 @@ pre {
 }
 
 .black {
-  color: black
+  color: black;
 }
