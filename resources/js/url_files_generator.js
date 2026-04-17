@@ -59,7 +59,7 @@ function generate() {
         var file = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>URL</key><string>${url}</string></dict></plist>`;
         previousDownloadName = "file.webloc";
     } else if (format == "html") {
-        var file = `<!DOCTYPE html><html><head><script>window.location.replace("${url}")</script></head><body><a href="${url}">${url}</a></body></html>`;
+        var file = `<!DOCTYPE html><html><body><redirect href=${url}></redirect><script>const element = document.querySelector("redirect"); const url = element.getAttribute("href"); window.location.replace(url); element.innerHTML = \`<a href=\${url}>\${url}</a>\`;</script></body></html>`;
         previousDownloadName = "file.html";
     }
 
