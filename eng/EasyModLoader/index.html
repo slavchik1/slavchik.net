@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EasyModLoader</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../../resources/logo/logo.png" type="image/x-icon">
+        <link rel="icon" href="../../resources/logo/logo.png" type="image/x-icon">
+        <script id="markdown" type="text/plain"># EasyModLoader
+
+## About the program
+
+EasyModLoader is a program that imports mods into your Minecraft out of the specialised directory or an EMLD file.
+The program is good when sharing a modpacks to friends, so they could easily and quickly import them 
+
+## About a specialised directory
+
+Specialised directory is a place from EasyModLoader imports the mods.
+It has this-like structure:
+```
+Specialised directory/
+    mods/
+        industrialcraft.jar
+        galacticraft.jar
+        twilightforest.jar
+        create.jar
+        ...
+    installer.jar
+    info.json
+```
+The 3 elements of it must be named exactly the same as mentioned above.
+
+The `mods` subdirectory contains all the mods' jar files.
+The program copies this files into Minecraft's `mods` directory.
+
+`installer.jar` file is a proper mod loader (like Forge, NeoForge, Fabric etc).
+
+`info.json` contains an object with the only key `"ADDITIONAL_INSTALLER_ARGUMENTS"` containing an arguments array with that the installer.json is run.
+For example, if NeoForge 21.11.38-beta its arguments array is `["--install-client"]`, the program installs the client without opening the graphical interface, so the user doesn't need to press 'install' button once more.
+
+## About an EMLD file
+
+An EMLD file is basically a zip archive made out of the specialised directory.
+</script>
+    </head>
+    <body>
+        <div id="area-to-paste"></div>
+        <script src="../../resources/js/EasyModLoader.js" type="module"></script>
+    </body>
+</html>
