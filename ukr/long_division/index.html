@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Ділення з максимальною точністю (бета)</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="../../resources/logo/logo.png" type="image/x-icon">
+        <link rel="icon" href="../../resources/logo/logo.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/styles11.css">
+    </head>
+    <body>
+        <center>
+            <h1>Ділення з максимальною точністю (бета)</h1>
+        </center>
+        <hr>
+        <img src="../../resources/images/blank.png" width="0" height="10px">
+        <center>
+            <div class="main-div">
+                <hr color="white">
+                <img src="../../resources/images/blank.png" width="0" height="10px">
+                <div class="child-div">
+                    <div class="upper-div" class="upper-div-divider">
+                        <input id="x" placeholder="Ділене">
+                        <span>/</span>
+                        <input id="y" placeholder="Дільник">
+                        <span>=</span>
+                        <textarea id="output" readonly onclick="copyText(this, 'Скопійовано!')">
+                        </textarea>
+                        <br>
+                    </div>
+                    <button width="200px" height="100px" class="execute-button" onclick="executeDivision()">
+                        <strong>Поділити!</strong>
+                    </button>
+                    <br>
+                    <h3>Додадкові налаштування:</h3>
+                    <p>Ліміт повторювальності: <input id="repetitionLimit" type="quantity" value="100"></p>
+                    <p>Роздільник цілої і дробової частин: <input id="outputFractionDivider" value=","></p>
+                    <p>Лоґування кількості ітерацій: <input id="doLogDivisionIterations" type="checkbox" value="no" class="checkbox"></p>
+                </div>
+                <img src="../../resources/images/blank.png" width="0" height="10px">
+                <hr color="white">
+            </div>
+        </center>
+        <script src="../../resources/js/long_division.js"></script>
+        <script src="../../resources/js/copyability.js"></script>
+    </body>
+</html>

@@ -15,6 +15,15 @@ input {
     width: 200px;
 }
 
+textarea {
+    width: 400px;
+    height: 15px;
+}
+
+p {
+    margin-bottom: -5px;
+}
+
 .main-div {
     background-color: #F9F9F9;
     width: 80%;
@@ -24,6 +33,7 @@ input {
 .upper-div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 70%;
     margin-bottom: 15px;
 }
@@ -34,6 +44,23 @@ input {
     width: 70%;
 }
 
+.child-div {
+    padding-left: 10px;
+}
+
 .invisible {
     display: none;
+}
+
+.checkbox {
+    width: 13px !important;
+}
+
+.execute-button {
+    padding: 15px;
+}
+
+.upper-div-divider {
+    width: 100% !important;
+    justify-content: start !important;
 }
