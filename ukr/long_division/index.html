@@ -23,17 +23,17 @@
                         <span>/</span>
                         <input id="y" placeholder="Дільник">
                         <span>=</span>
-                        <textarea id="output" readonly onclick="copyText(this, 'Скопійовано!')">
-                        </textarea>
+                        <textarea id="output" readonly onclick="copyText(this, 'Скопійовано!', undefined, false)"></textarea>
                         <br>
                     </div>
                     <button width="200px" height="100px" class="execute-button" onclick="executeDivision()">
                         <strong>Поділити!</strong>
                     </button>
                     <br>
+                    <br>
                     <h3>Додадкові налаштування:</h3>
-                    <p>Ліміт повторювальності: <input id="repetitionLimit" type="quantity" value="100"></p>
-                    <p>Роздільник цілої і дробової частин: <input id="outputFractionDivider" value=","></p>
+                    <p>Ліміт максимальної кількості чисел після роздільника: <input id="repetitionLimit" type="quantity" value="10000"></p>
+                    <p>Десятковий роздільник: <input id="outputFractionDivider" value=","></p>
                     <p>Лоґування кількості ітерацій: <input id="doLogDivisionIterations" type="checkbox" value="no" class="checkbox"></p>
                 </div>
                 <img src="../../resources/images/blank.png" width="0" height="10px">
