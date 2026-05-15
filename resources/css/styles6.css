@@ -1,16 +1,19 @@
 body {
-  background-color: white;
+  background-color: var(--bg-color);
   font-family: 'Times New Roman', Times, serif;
+  color: var(--text-color);
 }
 
 div {
-  background-color: #F9F9F9;
+  background-color: var(--page-color);
   width: 80%;
   text-align: left;
+  padding-top: 0.01px;
+  padding-bottom: 10px;
 }
 
 a {
-  color: blue;
+  color: var(--a-color);
   text-decoration: none;
   margin: 10px;
 }

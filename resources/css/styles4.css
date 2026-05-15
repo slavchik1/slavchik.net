@@ -1,14 +1,17 @@
 body {
-  background-color: white;
+  background-color: var(--bg-color);
   font-family: 'Times New Roman', Times, serif;
+  color: var(--text-color);
 }
 
 .main_{
-  background-color: #F9F9F9;
+  background-color: var(--page-color);
   width: 80%;
   align-items: left;
   text-align: left;
   display: flex;
+  padding-top: 0.01px;
+  padding-bottom: 10px;
 }
 
 .left_ {
